@@ -1,0 +1,51 @@
+.bg-white {
+    background-color: #ffffff;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.bg-blue {
+    background-color: #5353f8;
+}
+
+.blue {
+    color: #5353f8;
+}
+
+.bg-yellow {
+    background-color: #bebc20;
+}
+
+.yellow {
+    color: #bebc20;
+}
+
+.bg-black {
+    background-color: #201e1e;
+}
+
+.black {
+    color: #201e1e;
+}
+
+.bg-gray {
+    background-color: #555;
+}
+
+.gray {
+    color: #555;
+}
+
+.bg-gray-light {
+    background-color: rgb(218, 217, 217);
+}
+
+.gray-light {
+    color: rgb(218, 217, 217);
+}
+
+.borda-azul {
+    border: solid 1px #5353f8;
+}
