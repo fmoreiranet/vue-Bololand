@@ -348,6 +348,7 @@
 <script>
 import HeaderPage from "./HeaderPage.vue";
 import NavbarPage from "./NavbarPage.vue";
+
 export default {
   components: {
     HeaderPage,
