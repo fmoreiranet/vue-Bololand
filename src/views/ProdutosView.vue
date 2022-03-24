@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavbarPage />
-    <h2>Produtos</h2>
+    <section class="container">
+      <h2>Produtos</h2>
+    </section>
   </div>
 </template>
 
