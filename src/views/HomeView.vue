@@ -208,7 +208,10 @@
           </div>
         </div>
         <div class="col-md-4 retirarElemento">
-          <img src="/img/propaganda/p300x800-01.jpg" class="img-fluid" />
+          <img
+            src="@/assets/img/propaganda/p300x800-01.jpg"
+            class="img-fluid"
+          />
         </div>
       </div>
     </section>
@@ -322,7 +325,7 @@
             </div>
             <div class="col-md-3">
               <h4 class="ps-4">Formas de Pagamento</h4>
-              <img src="img/pagamento.jpg" alt="" class="img-fluid" />
+              <img src="@/assets/img/pagamento.jpg" alt="" class="img-fluid" />
             </div>
             <div class="col-md-2">
               <h4 class="ps-4">Contatos</h4>
@@ -345,17 +348,21 @@
   </main>
 </template>
 
+
 <script>
-import HeaderPage from "./HeaderPage.vue";
-import NavbarPage from "./NavbarPage.vue";
+// @ is an alias to /src -- "@" é um atalhos para a pasta principal do projetos "/src"
+import HeaderPage from "@/components/HeaderPage.vue";
+import NavbarPage from "@/components/NavbarPage.vue";
 
 export default {
+  //name: "PrincipalPage", //Podemos Apagar por que vamos usar o nome do arquivo.
   components: {
     HeaderPage,
     NavbarPage,
   },
 };
 </script>
+
 
 <style scope>
 /* 
@@ -367,7 +374,7 @@ Fonte: https://fonts.google.com/specimenTab?standard-styles#about
 #propaganda3,
 #propaganda4 {
   padding: 0;
-  background-image: url(../../assets/img/propaganda/p200x1000-01-2.jpg);
+  background-image: url(@/assets/img/propaganda/p200x1000-01-2.jpg);
   width: 100%;
   height: 100%;
   min-height: 250px;
@@ -421,7 +428,7 @@ section {
 .demostracaoDetalhe {
   height: auto;
   min-height: 450px;
-  background-image: url(../../assets/img/produtos/produto01.jpg);
+  background-image: url(@/assets/img/produtos/produto01.jpg);
   background-position: center;
   background-size: cover;
   font-size: 1.2222em;
@@ -445,15 +452,15 @@ section {
 }
 
 .imgBG1 {
-  background-image: url(../../assets/img/produtos/p1.jpg);
+  background-image: url(@/assets/img/produtos/p1.jpg);
 }
 
 .imgBG2 {
-  background-image: url(../../assets/img/produtos/produto02.jpg);
+  background-image: url(@/assets/img/produtos/produto02.jpg);
 }
 
 .imgBG3 {
-  background-image: url(../../assets/img/produtos/p3.jpg);
+  background-image: url(@/assets/img/produtos/p3.jpg);
 }
 
 .imgSocial {

@@ -1,18 +1,10 @@
 <template>
-  <PrincipalPage />
+  <!-- <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav> -->
+  <router-view />
 </template>
-
-<script>
-//import HelloWorld from './components/HelloWorld.vue'
-import PrincipalPage from "./components/pages/PrincipalPage.vue";
-export default {
-  name: "App",
-  components: {
-    //HelloWorld,
-    PrincipalPage,
-  },
-};
-</script>
 
 <style>
 </style>

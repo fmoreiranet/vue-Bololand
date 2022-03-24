@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavbarPage />
     <form action="" class="col-12 col-md-6 m-auto bg-white p-5">
       <div class="form-group">
         <label>E-mail</label>
@@ -16,7 +17,12 @@
 </template>
 
 <script>
-export default {};
+import NavbarPage from "@/components/NavbarPage.vue";
+export default {
+  components: {
+    NavbarPage,
+  },
+};
 </script>
 
 <style>
