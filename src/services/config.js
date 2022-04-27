@@ -11,15 +11,14 @@ export const http = axios.create({
 var token = localStorage.getItem("token");
 
 if (token != null) {
-    // Add a request interceptor
-    axios.interceptors.request.use(function (config) {
-        // Do something before request is sent
-        config.headers({
-            "Authorization": "Bearer " + localStorage.getItem("token")
-        });
-        return config;
-    }, function (error) {
-        // Do something with request error
-        return Promise.reject(error);
-    });
+    // Request interceptors for API calls
+    axios.interceptors.request.use(
+        config => {
+            config.headers['Authorization'] = "Bearer " + localStorage.getItem("token");
+            return config;
+        },
+        error => {
+            return Promise.reject(error);
+        }
+    )
 }

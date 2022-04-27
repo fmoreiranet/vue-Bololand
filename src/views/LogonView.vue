@@ -32,7 +32,8 @@
 <script>
 import NavbarPage from "@/components/NavbarPage.vue";
 import UsuarioService from "@/services/usuario";
-import { RouterLink } from "vue-router";
+import router from "@/router";
+
 export default {
   components: {
     NavbarPage,
@@ -74,7 +75,7 @@ export default {
           localStorage.setItem("token", res.data.result.token);
           localStorage.setItem("user", JSON.stringify(res.data.result));
           alert("Usuario logado!");
-          RouterLink("/");
+          router.push("/");
         })
         .catch((err) => {
           console.log(err);
