@@ -21,8 +21,17 @@
             class="form-control"
           />
         </div>
-        <div>
-          <input type="button" value="salvar" @click="loganUsuario()" />
+        <div class="form-group right my-1">
+          <button
+            type="button"
+            class="btn btn-primary mx-1"
+            @click="logonUsuario()"
+          >
+            Entrar
+          </button>
+          <button type="button" class="btn btn-danger" @click="logoffUsuario()">
+            Sair
+          </button>
         </div>
       </form>
     </section>
@@ -68,7 +77,7 @@ export default {
         console.log(res);
       });
     },
-    loganUsuario() {
+    logonUsuario() {
       UsuarioService.login(this.dadosUsuario)
         .then((res) => {
           console.log(res);
@@ -81,6 +90,10 @@ export default {
           console.log(err);
           //alert("Erro ao fazer o login!");
         });
+    },
+    logoffUsuario() {
+      localStorage.clear();
+      router.push("/");
     },
   },
 };

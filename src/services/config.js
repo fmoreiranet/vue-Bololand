@@ -8,17 +8,10 @@ export const http = axios.create({
     }
 });
 
-var token = localStorage.getItem("token");
-
-if (token != null) {
-    // Request interceptors for API calls
-    axios.interceptors.request.use(
-        config => {
-            config.headers['Authorization'] = "Bearer " + localStorage.getItem("token");
-            return config;
-        },
-        error => {
-            return Promise.reject(error);
-        }
-    )
-}
+http.interceptors.request.use(
+    function(config) {
+        const token = localStorage.getItem('token');
+        config.headers.Authorization = token ? "Bearer " + token : '';
+        return config;
+    }
+);
