@@ -71,8 +71,8 @@ export default {
       UsuarioService.login(this.dadosUsuario)
         .then((res) => {
           console.log(res);
-          Storage.setItem("token", res.data.token);
-          Storage.setItem("user", res.data);
+          localStorage.setItem("token", res.data.result.token);
+          localStorage.setItem("user", JSON.stringify(res.data.result));
           alert("Usuario logado!");
           RouterLink("/");
         })

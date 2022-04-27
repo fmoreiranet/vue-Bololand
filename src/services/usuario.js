@@ -1,21 +1,16 @@
 import { http } from './config';
 
 export default {
-    list: function() {
+    list: function () {
         return http.get("usuario/list");
     },
 
-    login: function(dadosUsuario) {
+    login: function (dadosUsuario) {
         // {
         //  "usuario": "sc@email.com",
         //  "senha": "123@123"
         // }
         console.log(dadosUsuario);
-        return http.post("usuario/logon", dadosUsuario, {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json;charset=utf-8',
-            }
-        });
+        return http.post("usuario/logon", dadosUsuario);
     }
 };
