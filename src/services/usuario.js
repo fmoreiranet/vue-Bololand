@@ -7,9 +7,15 @@ export default {
 
     login: function(dadosUsuario) {
         // {
-        // "usuario": "sc@email.com",
-        //     "senha": "123@123"
+        //  "usuario": "sc@email.com",
+        //  "senha": "123@123"
         // }
-        return http.post("usuario/logon", dadosUsuario);
+        console.log(dadosUsuario);
+        return http.post("usuario/logon", dadosUsuario, {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json;charset=utf-8',
+            }
+        });
     }
 };

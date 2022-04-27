@@ -25,7 +25,6 @@
           <input type="button" value="salvar" @click="loganUsuario()" />
         </div>
       </form>
-      {{ dadosUsuario }}
     </section>
   </div>
 </template>
@@ -33,6 +32,7 @@
 <script>
 import NavbarPage from "@/components/NavbarPage.vue";
 import UsuarioService from "@/services/usuario";
+import { RouterLink } from "vue-router";
 export default {
   components: {
     NavbarPage,
@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     //this.loadDoc("http://localhost/api/usuario/list", myFunction);
-    this.listarUsuarios();
+    //this.listarUsuarios();
   },
   methods: {
     // function loadDoc(url, xFunction) {
@@ -71,9 +71,14 @@ export default {
       UsuarioService.login(this.dadosUsuario)
         .then((res) => {
           console.log(res);
+          Storage.setItem("token", res.data.token);
+          Storage.setItem("user", res.data);
+          alert("Usuario logado!");
+          RouterLink("/");
         })
         .catch((err) => {
-          console.error(err);
+          console.log(err);
+          //alert("Erro ao fazer o login!");
         });
     },
   },
