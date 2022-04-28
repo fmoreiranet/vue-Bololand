@@ -1,5 +1,6 @@
 <template>
-  <section>
+  <NavbarPage />
+  <section class="container">
     <div class="form-group">
       <label for="">Nome</label>
       <input
@@ -16,17 +17,25 @@
 </template>
 
 <script>
-import { Usuario } from "@/models/Usuario";
-import UsuarioService from '@/services/usuario';
-var user = new Usuario();
+import NavbarPage from "@/components/NavbarPage.vue";
+import { Usuario } from "@/models/Usuario"; //{} seve para pegar as classes com o nome defalt
+import UsuarioService from "@/services/usuarioService";
+var usuario = new Usuario();
+
 export default {
-
-    data(){
-        return{
-            usuario = user
-        }
-    }
-
+  components: {
+    NavbarPage,
+  },
+  data() {
+    return {
+      usuario,
+    };
+  },
+  methods: {
+    cadastrar() {
+      UsuarioService.add(this.usuario);
+    },
+  },
 };
 </script>
 

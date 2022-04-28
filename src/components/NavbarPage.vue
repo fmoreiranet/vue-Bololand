@@ -17,7 +17,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">Inicio</a>
+            <router-link to="/" class="nav-link" aria-current="page"
+              >Inicio</router-link
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#demostracao">Demostração</a>
@@ -35,10 +37,11 @@
 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/logon">Entrar</a>
+            <!-- <a class="nav-link" href="/logon">Entrar</a> -->
+            <router-link to="/logon" class="nav-link">Entrar</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/produtos">Pedidos</a>
+            <router-link to="/pedidos" class="nav-link">Pedidos</router-link>
           </li>
         </ul>
 

@@ -14,24 +14,48 @@ const routes = [{
         // which is lazy-loaded when the route is visited.
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/AboutView.vue')
+
     },
     {
         path: '/logon',
         name: 'login',
         component: () =>
             import ('@/views/LogonView.vue') // "=>" equivale a uma "function(){}"
+
+    },
+    {
+        path: '/usuario_add',
+        name: 'usuario_add',
+        component: () =>
+            import ('@/views/UsuarioForm.vue') // "=>" equivale a uma "function(){}"
+
+    },
+    {
+        path: '/usuario_list',
+        name: 'usuario_list',
+        component: () =>
+            import ('@/views/UsuarioList.vue') // "=>" equivale a uma "function(){}"
+
+    },
+    {
+        path: '/pedidos',
+        name: 'pedidos',
+        component: () =>
+            import ('@/views/PedidosView.vue') // "=>" equivale a uma "function(){}"
+
     },
     {
         path: '/produtos',
         name: 'produtos',
         component: () =>
             import ('@/views/ProdutosView.vue')
+
     }
-]
+];
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
-})
+});
 
-export default router
+export default router;

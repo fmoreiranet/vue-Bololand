@@ -21,17 +21,35 @@
             class="form-control"
           />
         </div>
+
+        <div class="form-group my-1">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button
+              type="button"
+              class="btn btn-primary mx-1"
+              @click="logonUsuario()"
+            >
+              Entrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              @click="logoffUsuario()"
+            >
+              Sair
+            </button>
+          </div>
+        </div>
+        <hr />
         <div class="form-group right my-1">
-          <button
-            type="button"
-            class="btn btn-primary mx-1"
-            @click="logonUsuario()"
-          >
-            Entrar
-          </button>
-          <button type="button" class="btn btn-danger" @click="logoffUsuario()">
-            Sair
-          </button>
+          <!-- <button type="button" @click="$router.push('usuario_add')" class="btn btn-danger mx-1">
+            Cadastrar
+          </button> -->
+          <div class="d-grid gap-2">
+            <router-link to="usuario_add" class="btn btn-outline-warning mx-1">
+              Cadastrar
+            </router-link>
+          </div>
         </div>
       </form>
     </section>
@@ -40,7 +58,7 @@
 
 <script>
 import NavbarPage from "@/components/NavbarPage.vue";
-import UsuarioService from "@/services/usuario";
+import UsuarioService from "@/services/usuarioService";
 import router from "@/router";
 
 export default {
