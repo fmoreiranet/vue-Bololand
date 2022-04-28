@@ -1,11 +1,11 @@
 import { http } from './config';
 
-export default {
-    list: function () {
+export default UsuarioService = {
+    list: function() {
         return http.get("usuario/list");
     },
 
-    login: function (dadosUsuario) {
+    login: function(dadosUsuario) {
         // {
         //  "usuario": "sc@email.com",
         //  "senha": "123@123"
