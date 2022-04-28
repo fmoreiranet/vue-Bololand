@@ -32,6 +32,7 @@
 <script>
 import NavbarPage from "@/components/NavbarPage.vue";
 import UsuarioService from "@/services/usuario";
+import router from "@/router";
 
 export default {
   components: {
@@ -47,10 +48,16 @@ export default {
   },
   methods: {
     listarUsuarios() {
-      UsuarioService.list().then((res) => {
-        console.log(res);
-        this.Produtos = res.data.result;
-      });
+      UsuarioService.list()
+        .then((res) => {
+          console.log(res);
+          this.Produtos = res.data.result;
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Usuario sem acesso!");
+          router.push("/");
+        });
     },
   },
 };

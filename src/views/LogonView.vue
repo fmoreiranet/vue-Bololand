@@ -88,7 +88,7 @@ export default {
         })
         .catch((err) => {
           console.log(err);
-          //alert("Erro ao fazer o login!");
+          alert("Erro ao fazer o login!");
         });
     },
     logoffUsuario() {
