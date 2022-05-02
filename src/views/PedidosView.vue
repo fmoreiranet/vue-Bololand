@@ -1,6 +1,6 @@
 <template>
   <NavbarPage />
-  <section class="container"></section>
+  <section class="container bg-light"></section>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <NavbarPage />
-  <section class="container">
+  <section class="container bg-light">
     <div class="form-group">
       <label for="">Nome</label>
       <input
@@ -52,21 +52,6 @@
       />
       <small id="helpId" class="text-muted"></small>
     </div>
-
-    <div class="form-group">
-      <label for="">Foto Perfil</label>
-      <input
-        type="file"
-        name="foto"
-        class="form-control"
-        placeholder=""
-        aria-describedby="helpId"
-        multiple
-      />
-      <small id="helpId" class="text-muted"></small>
-    </div>
-    <button @click="sendFile">Send</button>
-
     <div class="form-group">
       <label for="">Tel</label>
       <input
@@ -110,6 +95,8 @@
 import NavbarPage from "@/components/NavbarPage.vue";
 import { Usuario } from "@/models/Usuario"; //{} seve para pegar as classes com o nome defalt
 import UsuarioService from "@/services/usuarioService";
+import router from "@/router";
+
 var usuario = new Usuario();
 
 export default {
@@ -127,23 +114,12 @@ export default {
         .then((res) => {
           console.log(res);
           alert("Cadastrado!", res);
+          router.push("/");
         })
         .catch((err) => {
           console.error(err);
           alert("Erro ao cadastrar!");
         });
-    },
-    async sendFile() {
-      let dataForm = new FormData();
-      for (let file of this.$refs.files.files) {
-        dataForm.append(`file`, file);
-      }
-      let res = await fetch(`http://localhost/api/upload`, {
-        method: "POST",
-        body: dataForm,
-      });
-      let data = await res.json();
-      console.log(data);
     },
   },
 };

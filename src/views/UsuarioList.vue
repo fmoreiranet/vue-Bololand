@@ -1,7 +1,7 @@
 <template>
   <div>
     <AdminView />
-    <section class="container">
+    <section class="container bg-light">
       <h2>Usuarios</h2>
       <table class="table">
         <thead>

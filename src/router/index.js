@@ -38,6 +38,13 @@ const routes = [{
 
     },
     {
+        path: '/usuario_perfil',
+        name: 'usuario_pefil',
+        component: () =>
+            import ('@/views/UsuarioPerfil.vue') // "=>" equivale a uma "function(){}"
+
+    },
+    {
         path: '/pedidos',
         name: 'pedidos',
         component: () =>
