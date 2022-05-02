@@ -84,6 +84,7 @@ export default {
       UsuarioService.upload(dataForm)
         .then((res) => {
           console.log(res);
+          this.getUsuario();
           alert("Foto Alterada!");
         })
         .catch((err) => {
@@ -99,20 +100,26 @@ export default {
           this.usuario = res.data.result[0];
         })
         .catch((err) => {
-          console.error(err);
+          console.log(err);
         });
     },
   },
   mounted() {
     this.getUsuario();
   },
-  watch: {
-    usuario: function () {
-      this.getUsuario();
-    },
-  },
+  // watch: {
+  //   usuario: function () {
+  //     this.getUsuario();
+  //   },
+  // },
   computed: {
     perfil() {
+      if (
+        typeof this.usuario.foto_perfil == undefined ||
+        this.usuario.foto_perfil == ""
+      ) {
+        return "@/assets/perfil.png";
+      }
       return "http://localhost/api/midias/user/" + this.usuario.foto_perfil;
     },
   },
