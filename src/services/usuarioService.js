@@ -19,12 +19,12 @@ export default {
     },
 
 
+    /// {
+    ///  "usuario": "sc@email.com",
+    ///  "senha": "123@123"
+    /// }
     login: function(dadosUsuario) {
-        // {
-        //  "usuario": "sc@email.com",
-        //  "senha": "123@123"
-        // }
-        console.log(dadosUsuario);
+        //console.log(dadosUsuario);
         return http.post("usuario/logon", dadosUsuario);
     },
 

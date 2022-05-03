@@ -111,9 +111,9 @@ export default {
   methods: {
     cadastrar() {
       UsuarioService.add(this.usuario)
-        .then((res) => {
-          console.log(res);
-          alert("Cadastrado!", res);
+        .then(() => {
+          //console.log(res);
+          alert("Cadastrado!");
           router.push("/");
         })
         .catch((err) => {
