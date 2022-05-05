@@ -2,7 +2,7 @@
   <header>
     <div class="logo">
       <img
-        src="@/assets/logo.png"
+        src="@/assets/img/logo.png"
         alt="Logo marca da loja bololand."
         title="Logomarca Bololand"
       />

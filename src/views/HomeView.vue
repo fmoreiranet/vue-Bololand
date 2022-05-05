@@ -49,7 +49,7 @@
       <div class="row">
         <div class="col-md-2 col-4 text-center py-2">
           <img
-            src="icone.png"
+            src="@/assets/img/icone.png"
             alt="Demostração"
             class="img-fluid imgSocial rounded-circle"
           />
@@ -57,7 +57,7 @@
         </div>
         <div class="col-md-2 col-4 text-center py-2">
           <img
-            src="icone.png"
+            src="@/assets/img/icone.png"
             alt="Demostração"
             class="img-fluid imgSocial rounded-circle"
           />
@@ -65,7 +65,7 @@
         </div>
         <div class="col-md-2 col-4 text-center py-2">
           <img
-            src="icone.png"
+            src="@/assets/img/icone.png"
             alt="Demostração"
             class="img-fluid imgSocial rounded-circle"
           />
@@ -73,7 +73,7 @@
         </div>
         <div class="col-md-2 col-4 text-center py-2">
           <img
-            src="icone.png"
+            src="@/assets/img/icone.png"
             alt="Demostração"
             class="img-fluid imgSocial rounded-circle"
           />
@@ -81,7 +81,7 @@
         </div>
         <div class="col-md-2 col-4 text-center py-2">
           <img
-            src="icone.png"
+            src="@/assets/img/icone.png"
             alt="Demostração"
             class="img-fluid imgSocial rounded-circle"
           />
@@ -89,7 +89,7 @@
         </div>
         <div class="col-md-2 col-4 text-center py-2">
           <img
-            src="icone.png"
+            src="@/assets/img/icone.png"
             alt="Demostração"
             class="img-fluid imgSocial rounded-circle"
           />
@@ -134,7 +134,7 @@
             <div class="p-0">
               <a href="pages/produto-detalhe.html" target="_self">
                 <img
-                  src="img/produtos/produto01.jpg"
+                  src="@/assets/img/produtos/produto01.jpg"
                   alt="Produto 1"
                   class="img-fluid p-0"
                 />
@@ -177,7 +177,11 @@
 
     <section class="container bg-white bg-black p-0">
       <a href="https://www.w3schools.com" target="_blank">
-        <img src="img/propaganda/p200x1000-01-2.jpg" alt="" class="img-fluid" />
+        <img
+          src="@/assets/img/propaganda/p200x1000-01-2.jpg"
+          alt=""
+          class="img-fluid"
+        />
       </a>
     </section>
 

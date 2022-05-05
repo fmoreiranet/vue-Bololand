@@ -48,6 +48,7 @@
 import NavbarPage from "@/components/NavbarPage.vue";
 import { Usuario } from "@/models/Usuario"; //{} seve para pegar as classes com o nome defalt
 import UsuarioService from "@/services/usuarioService";
+//import { configure } from "@/services/config";
 
 var usuario = new Usuario();
 
@@ -118,9 +119,9 @@ export default {
         typeof this.usuario.foto_perfil == undefined ||
         this.usuario.foto_perfil == ""
       ) {
-        return "@/assets/perfil.png";
+        return "/img/perfil.png";
       }
-      return "http://localhost/api/midias/user/" + this.usuario.foto_perfil;
+      return "/midias/user/" + this.usuario.foto_perfil;
     },
   },
 };
