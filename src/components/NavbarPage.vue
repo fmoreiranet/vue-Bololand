@@ -93,9 +93,9 @@ export default {
   mounted() {
     this.getUsuario();
   },
-  watch() {
-    this.usuario;
-  },
+  // watch: {
+  //   usuario: function () {},
+  // },
 };
 </script>
 
