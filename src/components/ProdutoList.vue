@@ -6,18 +6,18 @@
           <div class="p-0">
             <a href="pages/produto-detalhe.html" target="_self">
               <img
-                src="@/assets/img/produtos/produto01.jpg"
-                alt="Produto 1"
+                :src="mostrarFoto(produto.fotos)"
+                :alt="produto.descricao"
                 class="img-fluid p-0"
               />
             </a>
           </div>
           <div class="p-2">
-            <h3>{{produto.nome}}</h3>
+            <h3>{{ produto.nome }}</h3>
           </div>
           <div class="px-1">
-            <p>{{produto.descricao}}</p>
-            <p>{{produto.valor}}</p>
+            <p>{{ produto.descricao }}</p>
+            <p>{{ produto.valor }}</p>
           </div>
           <div class="row px-3">
             <div class="col-md-6 col-12 p-2">
@@ -51,16 +51,18 @@
 <script>
 //import { Produto } from "@/models/Produto";
 import ProdutoService from "@/services/produtoService";
-var monkProduto= [{
+var monkProduto = [
+  {
     nome: "Celular",
     descricao: "Celular 4g",
-    valor: 1200
-},
-{
+    valor: 1200,
+  },
+  {
     nome: "Celular2",
     descricao: "Celular 5g",
-    valor: 2200
-}]
+    valor: 2200,
+  },
+];
 
 var produtos = monkProduto;
 
@@ -85,8 +87,11 @@ export default {
           console.log(err);
         });
     },
+    mostrarFoto(foto) {
+      return "http://localhost/api/midias/produtos/" + foto;
+    },
   },
-
+  computed: {},
 };
 </script>
 

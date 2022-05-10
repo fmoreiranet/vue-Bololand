@@ -121,7 +121,7 @@ export default {
       ) {
         return "/img/perfil.png";
       }
-      return "/midias/user/" + this.usuario.foto_perfil;
+      return "http://localhost/api/midias/user/" + this.usuario.foto_perfil;
     },
   },
 };

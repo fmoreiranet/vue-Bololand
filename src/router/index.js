@@ -52,10 +52,10 @@ const routes = [{
 
     },
     {
-        path: '/produtos',
-        name: 'produtos',
+        path: '/produto_add',
+        name: 'produto_add',
         component: () =>
-            import ('@/views/ProdutosView.vue')
+            import ('@/views/ProdutoForm.vue')
 
     }
 ];

@@ -157,9 +157,9 @@ export default {
   },
   methods: {
     cadastrar() {
-      ProdutoService.add(this.usuario)
+      ProdutoService.add(this.produto)
         .then((res) => {
-          //console.log(res);
+          console.log(res);
           alert("Cadastrado!");
           this.produto = res;
           //router.push("/");
