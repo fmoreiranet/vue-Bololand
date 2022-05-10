@@ -51,6 +51,7 @@
 <script>
 //import { Produto } from "@/models/Produto";
 import ProdutoService from "@/services/produtoService";
+import { configure } from "@/services/config";
 var monkProduto = [
   {
     nome: "Celular",
@@ -88,7 +89,7 @@ export default {
         });
     },
     mostrarFoto(foto) {
-      return "http://localhost/api/midias/produtos/" + foto;
+      return configure.localHost + "/midias/produtos/" + foto;
     },
   },
   computed: {},

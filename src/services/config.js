@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 export const configure = {
-    localAPI: location.origin + "/api/"
+    localHost: location.origin.replace(location.port, ""),
+    localAPI: location.origin.replace(location.port, "") + "/api/"
 };
 
 
 export const http = axios.create({
-    baseURL: "http://localhost/api/",
-    //baseURL: configure.localAPI,
+    baseURL: configure.localAPI,
     headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json;charset=utf-8',
