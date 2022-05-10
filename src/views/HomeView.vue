@@ -125,55 +125,7 @@
       class="clearfix container center bg-black"
     ></section>
 
-    <section id="produtos" class="container clearfix bg-white">
-      <!-- <h2>Produto de demostração</h2> -->
-
-      <div class="row">
-        <div class="col-6 col-md-3">
-          <div class="produtos">
-            <div class="p-0">
-              <a href="pages/produto-detalhe.html" target="_self">
-                <img
-                  src="@/assets/img/produtos/produto01.jpg"
-                  alt="Produto 1"
-                  class="img-fluid p-0"
-                />
-              </a>
-            </div>
-            <div class="p-2">
-              <h3>Produto 1</h3>
-            </div>
-            <div class="px-1">
-              <p>Descricação produtos</p>
-              <p>Valor produtos</p>
-            </div>
-            <div class="row px-3">
-              <div class="col-md-6 col-12 p-2">
-                <div class="form-group">
-                  <input
-                    type="number"
-                    step="1"
-                    min="0"
-                    max="10"
-                    value="0"
-                    class="form-control"
-                  />
-                </div>
-              </div>
-              <div class="col-md-6 col-12 p-2">
-                <div class="">
-                  <a href="pages/produto-detalhe.html" target="_blank">
-                    <button type="button" class="btn bg-yellow col-12">
-                      Comprar
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <ProdutoList />
 
     <section class="container bg-white bg-black p-0">
       <a href="https://www.w3schools.com" target="_blank">
@@ -357,12 +309,14 @@
 // @ is an alias to /src -- "@" é um atalhos para a pasta principal do projetos "/src"
 import HeaderPage from "@/components/HeaderPage.vue";
 import NavbarPage from "@/components/NavbarPage.vue";
+import ProdutoList from "@/components/ProdutoList.vue";
 
 export default {
   //name: "PrincipalPage", //Podemos Apagar por que vamos usar o nome do arquivo.
   components: {
     HeaderPage,
     NavbarPage,
+    ProdutoList,
   },
 };
 </script>

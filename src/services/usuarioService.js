@@ -8,16 +8,13 @@ export default {
         return http.post("usuario/add", dadosUsuario);
     },
 
-
     list: function() {
         return http.get("usuario/list");
     },
 
-
     get: function(id) {
         return http.get("usuario/get/" + id);
     },
-
 
     /// {
     ///  "usuario": "sc@email.com",
@@ -32,6 +29,4 @@ export default {
         console.log(files);
         return http.post("usuario/upload", files);
     }
-
-
 };
